@@ -1,10 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:vibra/constants/strings.dart';
-import 'package:vibra/ui/widgets/splash_logo.dart';
 
-class Splash extends StatelessWidget {
+import '/constants/constants.dart';
+import '/core/routes/app.router.dart';
+import '/widgets/splash_logo.dart';
+
+class Splash extends StatefulWidget {
   const Splash({super.key});
+
+  @override
+  State<Splash> createState() => _SplashState();
+}
+
+class _SplashState extends State<Splash> {
+  void bootstrap() async {
+    await Future.delayed(const Duration(seconds: 4));
+    Get.offNamed(Routes.loginScreen);
+  }
+
+  @override
+  void initState() {
+    bootstrap();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +35,10 @@ class Splash extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SplashLogo(),
+            Hero(
+              tag: HeroTags.splashLogo,
+              child: SplashLogo(),
+            ),
             const SizedBox(height: 40),
             Text(
               Strings.appTitle.toUpperCase(),
