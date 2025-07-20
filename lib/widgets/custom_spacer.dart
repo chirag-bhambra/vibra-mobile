@@ -10,6 +10,9 @@ class CustomSpacer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SizedBox();
+    return SizedBox(
+      height: height,
+      width: width,
+    );
   }
 }

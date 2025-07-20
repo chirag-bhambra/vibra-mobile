@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vibra/constants/colors.dart';
 
 class SplashLogo extends StatefulWidget {
   @override
@@ -49,7 +50,7 @@ class VibeChatLogoPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint()
-      ..color = Colors.purpleAccent
+      ..color = AppColors.primaryComponent
       ..style = PaintingStyle.stroke
       ..strokeWidth = 4;
 

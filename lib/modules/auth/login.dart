@@ -41,6 +41,7 @@ class Login extends StatelessWidget {
               child: CustomButton(
                 onTap: () {
                   //TODO: Handle login logic here
+                  Get.toNamed(Routes.home);
                 },
                 label: Strings.login,
                 isLoading: false,

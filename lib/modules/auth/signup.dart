@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:get/get.dart';
 import 'package:vibra/utils/utils.dart';
 
@@ -10,6 +11,8 @@ class SignUp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final bool isKeyboardVisible = KeyboardVisibilityProvider.isKeyboardVisible(context);
+
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
@@ -18,11 +21,19 @@ class SignUp extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 20.0),
-                  child: Hero(
-                    tag: HeroTags.splashLogo,
-                    child: SplashLogo(),
+                AnimatedOpacity(
+                  duration: const Duration(milliseconds: 300),
+                  opacity: isKeyboardVisible ? 0.0 : 1.0,
+                  curve: Curves.easeInOut,
+                  child: AnimatedSize(
+                    duration: const Duration(milliseconds: 300),
+                    child: !isKeyboardVisible ? Padding(
+                      padding: const EdgeInsets.only(bottom: 20.0),
+                      child: Hero(
+                        tag: HeroTags.splashLogo,
+                        child: SplashLogo(),
+                      ),
+                    ) : const SizedBox.shrink(),
                   ),
                 ),
                 const CustomInputField(

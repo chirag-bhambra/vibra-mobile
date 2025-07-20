@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:get/get.dart';
-import 'package:vibra/constants/colors.dart';
 
+import '/constants/constants.dart';
 import '/core/routes/app.router.dart';
 
 void main() {
@@ -13,13 +14,15 @@ class Vibra extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      theme: ThemeData(
-        scaffoldBackgroundColor: AppColors.primaryBackground,
+    return KeyboardVisibilityProvider(
+      child: GetMaterialApp(
+        theme: ThemeData(
+          scaffoldBackgroundColor: AppColors.primaryBackground,
+        ),
+        debugShowCheckedModeBanner: false,
+        initialRoute: Routes.splashScreen,
+        getPages: getPages
       ),
-      debugShowCheckedModeBanner: false,
-      initialRoute: Routes.splashScreen,
-      getPages: getPages
     );
   }
 }
