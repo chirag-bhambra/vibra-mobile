@@ -6,3 +6,5 @@ export 'custom_spacer.dart';
 export 'custom_text_button.dart';
 export 'suggestion_profile.dart';
 export 'profile_picture.dart';
+export 'custom_search_bar.dart';
+export 'profile_card.dart';

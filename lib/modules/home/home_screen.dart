@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:vibra/constants/images.dart';
 import 'package:vibra/modules/dashboard/dashboard_screen.dart';
+import 'package:vibra/modules/search/search_screen.dart';
 import './widgets/group_chat_button.dart';
 import '/constants/constants.dart';
 
@@ -16,8 +17,8 @@ class _HomeScreenState extends State<HomeScreen> {
   int _currentIndex = 0;
 
   final List<Widget> _screens = [
-    DashboardScreen(),
-    const Center(child: Text(Strings.search, style: TextStyle(color: Colors.white))),
+    const DashboardScreen(),
+    const SearchScreen(),
     const Center(child: Text(Strings.chats, style: TextStyle(color: Colors.white))),
     const Center(child: Text(Strings.profile, style: TextStyle(color: Colors.white))),
   ];

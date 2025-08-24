@@ -14,13 +14,13 @@ class ProfilePicture extends StatelessWidget {
         gradient: Gradients.profileFrameGradient,
         boxShadow: [
           BoxShadow(
-            color: AppColors.cozyViolet,
+            color: AppColors.purple,
             blurRadius: 20,
             spreadRadius: 1
           )
         ]
       ),
-      padding: const EdgeInsets.all(3),
+      padding: const EdgeInsets.all(2),
       child: CircleAvatar(
         radius: 40,
         backgroundImage: NetworkImage(image),

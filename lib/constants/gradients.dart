@@ -14,4 +14,13 @@ class Gradients {
   static const LinearGradient profileFrameGradient = LinearGradient(
     colors: [AppColors.cozyViolet, AppColors.purple],
   );
+
+  static const LinearGradient profileCardGradient = LinearGradient(
+    colors: [
+      AppColors.darkPurple,
+      AppColors.secondaryBackground,
+    ],
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+  );
 }

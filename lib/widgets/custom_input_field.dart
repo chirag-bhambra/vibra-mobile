@@ -6,7 +6,7 @@ class CustomInputField extends StatefulWidget {
   final TextEditingController? controller;
   final String? hintText;
   final String? labelText;
-  final IconData? prefixIcon;
+  final Widget? prefixIcon;
   final String? Function(String?)? validator;
   final TextInputType? keyboardType;
 
@@ -49,9 +49,7 @@ class _CustomInputFieldState extends State<CustomInputField> {
                     color: AppColors.primaryLightText,
                     fontSize: 14,
                   ),
-                  prefixIcon: widget.prefixIcon != null
-                      ? Icon(widget.prefixIcon)
-                      : null,
+                  prefixIcon: widget.prefixIcon,
                   suffixIcon: widget.hintText == Strings.passwordHint
                       ? IconButton(
                           onPressed: () {
