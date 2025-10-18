@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:vibra/constants/images.dart';
-import 'package:vibra/modules/dashboard/dashboard_screen.dart';
-import 'package:vibra/modules/search/search_screen.dart';
-import './widgets/group_chat_button.dart';
+
+import '/modules/dashboard/dashboard_screen.dart';
+import '/modules/search/search_screen.dart';
 import '/constants/constants.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -26,7 +25,6 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.primaryBackground,
       body: _screens[_currentIndex],
       bottomNavigationBar: CurvedNavigationBar(
         index: _currentIndex,

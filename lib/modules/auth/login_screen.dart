@@ -5,8 +5,8 @@ import '/core/core.dart';
 import '/widgets/widgets.dart';
 import '/constants/constants.dart';
 
-class Login extends StatelessWidget {
-  const Login({super.key});
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

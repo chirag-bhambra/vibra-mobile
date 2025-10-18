@@ -6,14 +6,14 @@ import '/constants/constants.dart';
 import '/core/routes/app.router.dart';
 import '/widgets/splash_logo.dart';
 
-class Splash extends StatefulWidget {
-  const Splash({super.key});
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
 
   @override
-  State<Splash> createState() => _SplashState();
+  State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _SplashState extends State<Splash> {
+class _SplashScreenState extends State<SplashScreen> {
   void bootstrap() async {
     await Future.delayed(const Duration(seconds: 4));
     Get.offNamed(Routes.loginScreen);

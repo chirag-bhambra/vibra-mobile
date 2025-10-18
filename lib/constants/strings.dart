@@ -18,4 +18,5 @@ class Strings {
   static const yourVibeToday = "What's your vibe today?";
   static const sendVibeToday = "Send\na Vibe";
   static const peopleAroundYou = "People around you";
+  static const chooseYourVibe = "Choose your vibe";
 }

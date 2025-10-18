@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:vibra/core/core.dart';
+
+import '/core/core.dart';
 import '/widgets/widgets.dart';
 
 class SearchScreen extends StatelessWidget {

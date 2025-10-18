@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:get/get.dart';
-import 'package:vibra/utils/utils.dart';
 
+import '/core/core.dart';
+import '/utils/utils.dart';
 import '/constants/constants.dart';
 import '/widgets/widgets.dart';
 
-class SignUp extends StatelessWidget {
-  const SignUp({super.key});
+class SignUpScreen extends StatelessWidget {
+  const SignUpScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -64,7 +65,7 @@ class SignUp extends StatelessWidget {
                   tag: HeroTags.authButton,
                   child: CustomButton(
                     onTap: () {
-                      //TODO: Handle signup logic here
+                      Get.toNamed(Routes.onboardingScreen);
                     },
                     label: Strings.signup,
                     isLoading: false,

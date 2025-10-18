@@ -1,0 +1,34 @@
+{
+  "personalities": [
+    {
+      "name": "Night Owl",
+      "description": "Loves late nights, quiet vibes, stargazing, and deep talks at 2 AM. Energy peaks after dark.",
+      "image": "assets/icons/night-owl.png"
+    },
+    {
+      "name": "Early Bird",
+      "description": "Enjoys mornings, fresh starts, sunrise walks, and coffee before the world wakes up. Optimistic and energetic in the day.",
+      "image": "assets/icons/early-bird.png"
+    },
+    {
+      "name": "Wanderer",
+      "description": "Loves exploring places, spontaneous plans, travel, and discovering hidden spots. Thrives on adventure.",
+      "image": "assets/icons/wanderer.png"
+    },
+    {
+      "name": "Homebody",
+      "description": "Prefers staying in, cozy vibes, movies, books, and comfort over chaos. Introverted but nurturing.",
+      "image": "assets/icons/homebody.png"
+    },
+    {
+      "name": "Creator",
+      "description": "Passionate about music, art, writing, or content creation. Expresses emotions through creativity.",
+      "image": "assets/icons/creator.png"
+    },
+    {
+      "name": "Hustler",
+      "description": "Always chasing goals, gym, work, or side hustles. Motivated, ambitious, and disciplined.",
+      "image": "assets/icons/hustler.png"
+    }
+  ]
+}

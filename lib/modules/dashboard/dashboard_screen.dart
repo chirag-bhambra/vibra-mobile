@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './widgets/widgets.dart';
 import '/core/core.dart';
-import './widgets/send_vibe_button.dart';
 import '/constants/constants.dart';
 import '/widgets/widgets.dart';
 
@@ -60,22 +60,7 @@ class DashboardScreen extends StatelessWidget {
               style: TextStyle(color: Colors.white, fontSize: 20),
             ),
             const CustomSpacer(),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                ...List.generate(
-                  3,
-                  (index) {
-                    final Map<String, String> user = MockData.users[index];
-                    return SuggestionProfile(
-                      username: user['name']!,
-                      distance: user['distance']!,
-                      image: user['image']!,
-                    );
-                  },
-                ),
-              ],
-            )
+            PeopleAroundYou(users: MockData.users)
           ],
         ),
       ),
